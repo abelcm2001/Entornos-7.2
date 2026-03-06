@@ -39,10 +39,5 @@ end
 %% Relación de los actores y los casos de uso
 Cliente --- CU1
 Admin --- CU3
-
-```
-
-
-
 ```
 
