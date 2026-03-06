@@ -33,7 +33,7 @@ CU1 ([Comprar producto])
 CU2 ([Aplicar Cupón descuento])
 CU3 ([Gestionar Stock])
 
-CU2 -.->|&lt;&lt;extend&gt;&gt;| CU1
+CU2 -.->|<<extend>>| CU1 
 end
 
 %% Relación de los actores y los casos de uso
