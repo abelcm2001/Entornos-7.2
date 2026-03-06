@@ -40,3 +40,32 @@ end
 Cliente --- CU1
 Admin --- CU3
 ```
+
+```mermaid
+
+graph LR
+
+%% Estos son los actores
+Espectador((Espectador))
+Editor((Editor de Contenido))
+Pasarela((Pasarela de Pagos))
+
+subgraph "Plataforma de Streaming (Estilo Netflix)"
+    CU1([Reproducir Película])
+    CU2([Validar Suscripción])
+    CU3([Activar Subtítulos])
+    CU4([Subir Nuevo Video])
+    CU5([Renovar Suscripción])
+end
+
+%% Relación entre los actores y los casos de uso
+Espectador --- CU1
+Espectador --- CU5
+Editor --- CU4
+Pasarela --- CU5
+
+
+CU1 -->|&lt;&lt;include&gt;&gt;| CU2
+CU1 -.->|&lt;&lt;extend&gt;&gt;| CU3
+
+```
